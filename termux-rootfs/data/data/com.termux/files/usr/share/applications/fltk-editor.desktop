@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Editor
+Comment=Simple text editor
+Exec=fltk-editor %U
+Terminal=false
+Type=Application
+StartupNotify=true
+MimeType=text/plain;

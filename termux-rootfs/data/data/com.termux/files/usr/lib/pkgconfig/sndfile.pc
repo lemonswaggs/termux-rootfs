@@ -1,0 +1,12 @@
+prefix=/data/data/com.termux/files/usr
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: sndfile
+Description: A library for reading and writing audio files
+Requires: 
+Version: 1.0.29pre1
+Libs: -L${libdir} -lsndfile
+Libs.private: -L/data/data/com.termux/files/usr/lib -lFLAC -L/data/data/com.termux/files/usr/lib -logg -L/data/data/com.termux/files/usr/lib -lvorbis -L/data/data/com.termux/files/usr/lib -lvorbisenc  
+Cflags: -I${includedir} 

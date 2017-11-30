@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=DosBox
+Comment=DOS emulator
+Exec=dosbox
+Icon=dosbox
+Terminal=false
+Type=Application
+StartupNotify=true

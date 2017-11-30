@@ -1,0 +1,12 @@
+#!/data/data/com.termux/files/usr/bin/sh
+##
+##  Do cleanup on package removal
+##
+
+PREFIX="/data/data/com.termux/files/usr"
+
+if [ "${1}" = "remove" ]; then
+    rm -f "${PREFIX}/lib/jvm/openjdk-9/lib/modules" > /dev/null 2>&1
+fi
+
+exit 0

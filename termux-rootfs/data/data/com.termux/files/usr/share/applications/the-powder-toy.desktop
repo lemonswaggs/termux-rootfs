@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=The Powder Toy
+Comment=Sandbox game
+Exec=powder
+Terminal=false
+Type=Application
+StartupNotify=true

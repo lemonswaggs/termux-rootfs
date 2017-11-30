@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Calculator
+Comment=Simple calculator
+Exec=zalc
+Terminal=false
+Type=Application
+StartupNotify=true

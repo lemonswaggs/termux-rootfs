@@ -1,0 +1,11 @@
+prefix=/data/data/com.termux/files/usr
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: giblib
+Description: wrapper library for imlib2, and other stuff
+Version: 1.2.4
+Libs: -L${libdir} -lgiblib  -L/data/data/com.termux/files/usr/lib -lImlib2
+Cflags: -I${includedir} -I${includedir}/giblib -I/data/data/com.termux/files/usr/include
+
