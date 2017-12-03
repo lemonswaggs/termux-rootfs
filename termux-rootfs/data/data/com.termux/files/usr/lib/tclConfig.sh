@@ -57,7 +57,7 @@ TCL_SHLIB_CFLAGS='-fPIC'
 TCL_CFLAGS_WARNING='-Wall'
 
 # Extra flags to pass to cc:
-TCL_EXTRA_CFLAGS=' -Oz -pipe -I/data/data/com.termux/files/usr/include'
+TCL_EXTRA_CFLAGS=' -O2 -pipe -I/data/data/com.termux/files/usr/include'
 
 # Base command to use for combining object files into a shared library:
 TCL_SHLIB_LD='${CC} -shared ${CFLAGS} ${LDFLAGS}'
@@ -100,7 +100,7 @@ TCL_LIB_FLAG='-ltcl8.6'
 
 # String to pass to linker to pick up the Tcl library from its
 # build directory.
-TCL_BUILD_LIB_SPEC='-L/home/fornwall/.termux-build/tcl/build -ltcl8.6'
+TCL_BUILD_LIB_SPEC='-L/home/builder/.termux-build/tcl/build -ltcl8.6'
 
 # String to pass to linker to pick up the Tcl library from its
 # installed directory.
@@ -135,7 +135,7 @@ TCL_UNSHARED_LIB_SUFFIX='${VERSION}.a'
 # different place than the directory containing the source files, this
 # points to the location of the sources, not the location where Tcl was
 # compiled.
-TCL_SRC_DIR='/home/fornwall/.termux-build/tcl/src'
+TCL_SRC_DIR='/home/builder/.termux-build/tcl/src'
 
 # List of standard directories in which to look for packages during
 # "package require" commands.  Contains the "prefix" directory plus also
@@ -153,14 +153,14 @@ TCL_STUB_LIB_FLAG='-ltclstub8.6'
 
 # String to pass to linker to pick up the Tcl stub library from its
 # build directory.
-TCL_BUILD_STUB_LIB_SPEC='-L/home/fornwall/.termux-build/tcl/build -ltclstub8.6'
+TCL_BUILD_STUB_LIB_SPEC='-L/home/builder/.termux-build/tcl/build -ltclstub8.6'
 
 # String to pass to linker to pick up the Tcl stub library from its
 # installed directory.
 TCL_STUB_LIB_SPEC='-L/data/data/com.termux/files/usr/lib -ltclstub8.6'
 
 # Path to the Tcl stub library in the build directory.
-TCL_BUILD_STUB_LIB_PATH='/home/fornwall/.termux-build/tcl/build/libtclstub8.6.a'
+TCL_BUILD_STUB_LIB_PATH='/home/builder/.termux-build/tcl/build/libtclstub8.6.a'
 
 # Path to the Tcl stub library in the install directory.
 TCL_STUB_LIB_PATH='/data/data/com.termux/files/usr/lib/libtclstub8.6.a'

@@ -10,6 +10,14 @@
         </startupnotify>
       </action>
     </item>
+    <item label="FLDiff">
+      <action name="Execute">
+        <command>fldiff</command>
+        <startupnotify>
+          <enabled>yes</enabled>
+        </startupnotify>
+      </action>
+    </item>
     <item label="Editor">
       <action name="Execute">
         <command>fltk-editor</command>
@@ -53,7 +61,7 @@
   <menu id="apps-qemu" label="QEMU">
     <item label="Free DOS">
       <action name="Execute">
-        <command>qemu-system-i386 -fda /data/data/com.termux/files/usr/share/qemu/OS/FreeDOS.img</command>
+        <command>qemu-freedos</command>
         <startupnotify>
           <enabled>yes</enabled>
         </startupnotify>
@@ -61,7 +69,7 @@
     </item>
     <item label="Tiny Core">
       <action name="Execute">
-        <command>qemu-system-i386 -cdrom /data/data/com.termux/files/usr/share/qemu/OS/TinyCore_8.2.iso</command>
+        <command>qemu-tinycore</command>
         <startupnotify>
           <enabled>yes</enabled>
         </startupnotify>

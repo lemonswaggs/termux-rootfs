@@ -21,8 +21,8 @@ ITCL_LIB_FILE=libitcl4.1.0.so
 
 # String to pass to linker to pick up the Itcl library from its
 # build directory.
-itcl_BUILD_LIB_SPEC='-L/home/fornwall/.termux-build/tcl/build/pkgs/itcl4.1.0 -litcl4.1.0'
-ITCL_BUILD_LIB_SPEC='-L/home/fornwall/.termux-build/tcl/build/pkgs/itcl4.1.0 -litcl4.1.0'
+itcl_BUILD_LIB_SPEC='-L/home/builder/.termux-build/tcl/build/pkgs/itcl4.1.0 -litcl4.1.0'
+ITCL_BUILD_LIB_SPEC='-L/home/builder/.termux-build/tcl/build/pkgs/itcl4.1.0 -litcl4.1.0'
 
 # String to pass to linker to pick up the Itcl library from its
 # installed directory.
@@ -35,8 +35,8 @@ ITCL_STUB_LIB_FILE=libitclstub4.1.0.a
 
 # String to pass to linker to pick up the Itcl stub library from its
 # build directory.
-itcl_BUILD_STUB_LIB_SPEC='-L/home/fornwall/.termux-build/tcl/build/pkgs/itcl4.1.0 -litclstub4.1.0'
-ITCL_BUILD_STUB_LIB_SPEC='-L/home/fornwall/.termux-build/tcl/build/pkgs/itcl4.1.0 -litclstub4.1.0'
+itcl_BUILD_STUB_LIB_SPEC='-L/home/builder/.termux-build/tcl/build/pkgs/itcl4.1.0 -litclstub4.1.0'
+ITCL_BUILD_STUB_LIB_SPEC='-L/home/builder/.termux-build/tcl/build/pkgs/itcl4.1.0 -litclstub4.1.0'
 
 # String to pass to linker to pick up the Itcl stub library from its
 # installed directory.
@@ -45,8 +45,8 @@ ITCL_STUB_LIB_SPEC='-L/data/data/com.termux/files/usr/lib/itcl4.1.0 -litclstub4.
 
 # String to pass to linker to pick up the Itcl stub library from its
 # build directory.
-itcl_BUILD_STUB_LIB_PATH='/home/fornwall/.termux-build/tcl/build/pkgs/itcl4.1.0/libitclstub4.1.0.a'
-ITCL_BUILD_STUB_LIB_PATH='/home/fornwall/.termux-build/tcl/build/pkgs/itcl4.1.0/libitclstub4.1.0.a'
+itcl_BUILD_STUB_LIB_PATH='/home/builder/.termux-build/tcl/build/pkgs/itcl4.1.0/libitclstub4.1.0.a'
+ITCL_BUILD_STUB_LIB_PATH='/home/builder/.termux-build/tcl/build/pkgs/itcl4.1.0/libitclstub4.1.0.a'
 
 # String to pass to linker to pick up the Itcl stub library from its
 # installed directory.
@@ -58,10 +58,10 @@ ITCL_STUB_LIB_PATH='/data/data/com.termux/files/usr/lib/itcl4.1.0/libitclstub4.1
 # If [incr Tcl] was compiled in a different place than the directory
 # containing the source files, this points to the location of the sources,
 # not the location where [incr Tcl] was compiled.
-itcl_SRC_DIR='/home/fornwall/.termux-build/tcl/src/pkgs/itcl4.1.0'
-ITCL_SRC_DIR='/home/fornwall/.termux-build/tcl/src/pkgs/itcl4.1.0'
+itcl_SRC_DIR='/home/builder/.termux-build/tcl/src/pkgs/itcl4.1.0'
+ITCL_SRC_DIR='/home/builder/.termux-build/tcl/src/pkgs/itcl4.1.0'
 
 # String to pass to the compiler so that an extension can
 # find installed Itcl headers.
-itcl_INCLUDE_SPEC='/home/fornwall/.termux-build/tcl/src/pkgs/itcl4.1.0/generic'
-ITCL_INCLUDE_SPEC='/home/fornwall/.termux-build/tcl/src/pkgs/itcl4.1.0/generic'
+itcl_INCLUDE_SPEC='/home/builder/.termux-build/tcl/src/pkgs/itcl4.1.0/generic'
+ITCL_INCLUDE_SPEC='/home/builder/.termux-build/tcl/src/pkgs/itcl4.1.0/generic'

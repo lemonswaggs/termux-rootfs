@@ -12,6 +12,10 @@ Operating Systems for QEMU
     User: tc
     Password: tcuser
 
+ To run: use command 'qemu-tinycore'.
+
 * FreeDOS.img - Free DOS
 
   Includes Nasm, VIM, debug.com, some games and demos.
+
+  To run: use command 'qemu-freedos'.

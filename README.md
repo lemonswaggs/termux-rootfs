@@ -14,7 +14,7 @@ Repository policy:
 * 4GB of free space in /data
 * [Patched Termux](./android-apps/Termux.apk) (Termux:Boot, Termux:Styling, Termux:Widget are integrated)
 * [Patched Termux:API](./android-apps/TermuxAPI.apk)
-* [VNC Viewer](./android-apps/VNCViewer.apk)
+* [VNC Viewer](./android-apps/VNCViewer.apk) (required if you want to use X)
 
 ## Useful links
 * Termux Home: https://termux.com/
@@ -174,9 +174,9 @@ servers:
 ```
 special/custom:
 ```
-  fakechroot, fakeroot, glibc-container, login, linkchk, myip, passwd, service-manager,
-  su, sudo, termux-backup, termux-container, termux-gensslcerts, testport, ubuntu-container,
-  update-config-guess, wifi-dump, wifi-jam, wttr.in
+  fakechroot, fakeroot, glibc-container, login, linkchk, myip, passwd, qemu-freedos,
+  qemu-tinycore, service-manager, su, sudo, termux-backup, termux-container, termux-gensslcerts,
+  termux-unowned-files, testport, ubuntu-container, update-config-guess, wifi-dump, wifi-jam, wttr.in
 ```
 vcs:
 ```
@@ -195,5 +195,5 @@ X11:
 
 X11 - GUI applications:
 ```
-  dosbox, fltk-editor, fluid, the-powder-toy (legacy), xclock, xterm, zalc
+  dosbox, fldiff, fltk-editor, fluid, the-powder-toy (legacy), xclock, xterm, zalc
 ```

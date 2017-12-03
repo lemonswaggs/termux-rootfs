@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=FLDiff
+Comment=Show differences between files
+Exec=fldiff
+Icon=fldiff
+Terminal=false
+Type=Application
+StartupNotify=true

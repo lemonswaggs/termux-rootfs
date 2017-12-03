@@ -1,0 +1,116 @@
+#!/data/data/com.termux/files/usr/bin/bash
+##
+##  Run a Tiny Core (GNU/Linux distribution)
+##
+##  Leonid Plyushch (C) 2017
+##
+##  This program is free software: you can redistribute it and/or modify
+##  it under the terms of the GNU General Public License as published by
+##  the Free Software Foundation, either version 3 of the License, or
+##  (at your option) any later version.
+##
+##  This program is distributed in the hope that it will be useful,
+##  but WITHOUT ANY WARRANTY; without even the implied warranty of
+##  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+##  GNU General Public License for more details.
+##
+##  You should have received a copy of the GNU General Public License
+##  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+##
+
+TINYCORE_ISO="${PREFIX}/share/qemu/OS/TinyCore_8.2.iso"
+TINYCORE_HDD="${PREFIX}/share/qemu/OS/TinyCore_HDD.qcow2"
+TINYCORE_SNAPSHOT="${PREFIX}/var/lib/qemu/TinyCore.snap.qcow2"
+
+if [ "${1}" = "-h" ] || [ "${1}" = "--help" ]; then
+    echo
+    echo " Usage: qemu-tinycore [-h|--help|-r|--reset]"
+    echo
+    echo " Run a Tiny Core in QEMU."
+    echo
+    echo " Options:"
+    echo "  -h, --help      Show this help"
+    echo
+    echo "  -r, --reset     Reset snapshot. Removes all changes"
+    echo "                  that was done to HDD image."
+    echo
+    echo " Environment variables:"
+    echo "  QEMU_SSH_PORT   Forward SSH to this port. If not"
+    echo "                  specified, then '8522' will be used."
+    echo
+    echo "  QEMU_WEB_PORT   Forward Web to this port. If not"
+    echo "                  specified, then '8580' will be used."
+    echo
+    echo "  VNC_DISPLAY     Set a display on which VNC server will"
+    echo "                  be started. For example, if display is"
+    echo "                  specified as ':5', then VNC server will"
+    echo "                  listen on port '5905'."
+    echo
+    exit 0
+elif [ "${1}" = "-r" ] || [ "${1}" = "--reset" ]; then
+    echo -n "[*] Removing snapshot... "
+    if rm -f "${TINYCORE_SNAPSHOT}" > /dev/null 2>&1; then
+        echo "OK"
+    else
+        echo "FAIL"
+        exit 1
+    fi
+fi
+
+if [ ! -z "${QEMU_SSH_PORT}" ]; then
+    if ! grep -qP '^\d{1,5}$' <(echo "${QEMU_SSH_PORT}"); then
+        echo "[!] Invalid SSH port specified: '${QEMU_SSH_PORT}'."
+        exit 1
+    fi
+else
+    QEMU_SSH_PORT="8522"
+fi
+
+if [ ! -z "${QEMU_WEB_PORT}" ]; then
+    if ! grep -qP '^\d{1,5}$' <(echo "${QEMU_WEB_PORT}"); then
+        echo "[!] Invalid Web port specified: '${QEMU_WEB_PORT}'."
+        exit 1
+    fi
+else
+    QEMU_WEB_PORT="8580"
+fi
+
+if [ ! -z "${VNC_DISPLAY}" ]; then
+    if ! grep -qP '^:\d{1,3}$' <(echo "${VNC_DISPLAY}"); then
+        echo "[!] Invalid VNC display specified: '${VNC_DISPLAY}'."
+        exit 1
+    fi
+
+    QEMU_DISPLAY="-display vnc="${VNC_DISPLAY}""
+else
+    QEMU_DISPLAY=""
+fi
+
+if [ ! -e "${TINYCORE_SNAPSHOT}" ]; then
+    echo -n "[*] Creating new snapshot... "
+    if qemu-img create -f qcow2 -b "${TINYCORE_HDD}" "${TINYCORE_SNAPSHOT}" > /dev/null 2>&1; then
+        echo "OK"
+    else
+        echo "FAIL"
+        exit 1
+    fi
+fi
+
+echo "[*] Starting TinyCore..."
+echo
+echo "    SSH: 127.0.0.1:${QEMU_SSH_PORT}"
+echo "    WEB: 127.0.0.1:${QEMU_WEB_PORT}"
+if [ ! -z "${QEMU_DISPLAY}" ]; then
+    VNC_PORT=$((${VNC_DISPLAY//:} + 5900))
+    echo "    VNC: 127.0.0.1:${VNC_PORT}"
+fi
+echo
+
+if [ $(nproc) -gt 3 ]; then
+    SMP="-smp 2"
+else
+    SMP=""
+fi
+
+exec qemu-system-i386 ${QEMU_DISPLAY} ${SMP} -m 256 -boot d -cdrom "${TINYCORE_ISO}" -hda "${TINYCORE_SNAPSHOT}" \
+                      -device e1000,netdev=qemunet0 -netdev user,id=qemunet0,hostfwd="tcp::${QEMU_SSH_PORT}-:22",hostfwd="tcp::${QEMU_WEB_PORT}-:80"

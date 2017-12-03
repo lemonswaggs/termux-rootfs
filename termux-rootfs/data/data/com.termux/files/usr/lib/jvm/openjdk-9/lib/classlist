@@ -183,6 +183,7 @@ java/lang/reflect/ReflectAccess
 jdk/internal/reflect/LangReflectAccess
 java/util/concurrent/locks/LockSupport
 java/lang/ref/Finalizer$FinalizerThread
+jdk/internal/misc/VM
 java/util/concurrent/ConcurrentHashMap$ForwardingNode
 java/nio/charset/Charset
 sun/nio/cs/StandardCharsets
@@ -193,7 +194,6 @@ sun/nio/cs/StandardCharsets$Classes
 sun/nio/cs/StandardCharsets$Cache
 java/lang/ThreadLocal
 java/util/concurrent/atomic/AtomicInteger
-jdk/internal/misc/VM
 java/lang/StringUTF16
 sun/nio/cs/UTF_8
 sun/nio/cs/Unicode
@@ -638,9 +638,9 @@ java/lang/invoke/InvokerBytecodeGenerator
 java/lang/invoke/InvokerBytecodeGenerator$2
 java/lang/invoke/MethodHandleImpl$Intrinsic
 java/lang/invoke/MethodHandleImpl$ArrayAccess
+java/lang/InternalError
 sun/invoke/empty/Empty
 java/lang/invoke/MethodHandleImpl$LoopClauses
-java/lang/InternalError
 java/lang/invoke/MethodHandleImpl$1
 jdk/internal/misc/JavaLangInvokeAccess
 java/lang/invoke/MethodHandleImpl$AsVarargsCollector

@@ -175,9 +175,9 @@ servers:
   tor (with obfs4 & meek), transfer.sh
 
 special/custom:
-  fakechroot, fakeroot, glibc-container, login, linkchk, myip, passwd, service-manager,
-  su, sudo, termux-backup, termux-container, termux-gensslcerts, testport, ubuntu-container,
-  update-config-guess, wifi-dump, wifi-jam, wttr.in
+  fakechroot, fakeroot, glibc-container, login, linkchk, myip, passwd, qemu-freedos,
+  qemu-tinycore, service-manager, su, sudo, termux-backup, termux-container, termux-gensslcerts,
+  termux-unowned-files, testport, ubuntu-container, update-config-guess, wifi-dump, wifi-jam, wttr.in
 
 vcs:
   git, mercurial, tig
@@ -191,4 +191,4 @@ X11:
   xtrans
 
 X11 - GUI applications:
-  dosbox, fltk-editor, fluid, the-powder-toy (legacy), xclock, xterm, zalc
+  dosbox, fldiff, fltk-editor, fluid, the-powder-toy (legacy), xclock, xterm, zalc
