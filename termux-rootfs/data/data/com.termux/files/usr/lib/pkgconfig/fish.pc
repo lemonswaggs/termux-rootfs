@@ -7,4 +7,4 @@ confdir=/data/data/com.termux/files/usr/share/fish/vendor_conf.d
 Name: fish
 Description: fish, the friendly interactive shell
 URL: https://fishshell.com/
-Version: 2.7.0
+Version: 2.7.1

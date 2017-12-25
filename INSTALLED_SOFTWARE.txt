@@ -1,0 +1,1 @@
+termux-rootfs/data/data/com.termux/files/usr/share/doc/termux-rootfs/INSTALLED_SOFTWARE.txt

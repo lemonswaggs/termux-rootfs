@@ -1,6 +1,6 @@
-#!/data/data/com.termux/files/usr/bin/python
+#!/data/data/com.termux/files/usr/bin/bash
 ##
-##  ifconfig.co - test port connectivity
+##  Check if port is open via service ifconfig.co
 ##
 ##  Leonid Plyushch (C) 2017
 ##
@@ -18,71 +18,40 @@
 ##  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ##
 
-from io import StringIO
-import requests
-import json
-import sys
+if [ -z "${1}" ] || [ "${1}" = "-h" ] || [ "${1}" = "--help" ]; then
+    echo
+    echo " Usage: testport [PORT]"
+    echo
+    echo " Check if specified port is open via ifconfig.co service."
+    echo
+    exit 0
+fi
 
-def usage():
-    print("")
-    print(" Usage: testport [-h|--help] PORT")
-    print("")
-    print(" Test reachablility of port from the Internet.")
-    print("")
+if ! grep -qP '^\d{1,5}$' <(echo "${1}"); then
+    echo "[!] Invalid port '${1}'."
+    exit 1
+fi
 
-if __name__ == "__main__":
-    port = None
+JSON_RESP=$(curl "https://ifconfig.co/port/${1}" 2>/dev/null)
 
-    if len(sys.argv) > 1:
-        if sys.argv[1] == '-h' or sys.argv[1] == '--help':
-            usage()
-            sys.exit(0)
-        else:
-            try:
-                port = int(sys.argv[1])
+if [ -z "${JSON_RESP}" ]; then
+    echo "Error while getting response." 1>&2
+    exit 1
+fi
 
-                if port < 1 or port > 65535:
-                    print("Port '{}' is invalid.".format(sys.argv[1]))
-                    print("Allowed port numbers are 1-65535.")
-                    usage()
-                    sys.exit(1)
-            except ValueError:
-                print("Got invalid value '{}'.".format(sys.argv[1]))
-                print("Allowed port numbers are 1-65535.")
-                usage()
-                sys.exit(1)
-    else:
-        usage()
-        sys.exit(0)
+if ! jq '.' <(echo "${JSON_RESP}") >/dev/null 2>&1; then
+    echo "Error while parsing json." 1>&2
+    exit 1
+fi
 
-    resp = requests.get('http://ifconfig.co/port/{}'.format(port))
+PORT=$(echo "${JSON_RESP}" | jq --raw-output '.port')
+REACHABLE=$(echo "${JSON_RESP}" | jq --raw-output '.reachable')
 
-    if resp.status_code == 200:
-        if resp.text is not None:
-            try:
-                str_io = StringIO(resp.text)
-                parsed = json.load(str_io)
-
-                ip = parsed['ip']
-                is_reachable = parsed['reachable']
-
-                print("IP: {}".format(ip))
-
-                if is_reachable is True:
-                    print("Port {} is open.".format(port))
-                else:
-                    print("Port {} is closed.".format(port))
-            except:
-                print("Error while decoding response from server.")
-                sys.exit(1)
-        else:
-            print("Got an empty response from server.")
-            sys.exit(1)
-    elif resp.status_code == 429:
-        print("Too many requests from are sent your IP.")
-        print("Try again later.")
-        sys.exit(1)
-    else:
-        printf("Error while sending request to server.")
-        printf("Server response: {}".format(resp.status_code))
-        sys.exit(1)
+if [ "${REACHABLE}" = "true" ]; then
+    echo "Port ${PORT} is open."
+elif [ "${REACHABLE}" = "false" ]; then
+    echo "Port ${PORT} is closed."
+else
+    echo "Error" 1>&2
+    exit 1
+fi

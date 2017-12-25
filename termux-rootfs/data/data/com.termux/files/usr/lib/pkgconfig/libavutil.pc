@@ -1,11 +1,11 @@
 prefix=/data/data/com.termux/files/usr
 exec_prefix=${prefix}
-libdir=${prefix}/lib
-includedir=${prefix}/include
+libdir=/data/data/com.termux/files/usr/lib
+includedir=/data/data/com.termux/files/usr/include
 
 Name: libavutil
 Description: FFmpeg utility library
-Version: 55.58.100
+Version: 55.78.100
 Requires: 
 Requires.private: 
 Conflicts:

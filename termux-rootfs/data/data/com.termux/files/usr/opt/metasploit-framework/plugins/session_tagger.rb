@@ -24,7 +24,11 @@ class Plugin::SessionTagger < Msf::Plugin
 
     if (session.interactive?)
       session.shell_write("MKDIR C:\\TaggedBy#{ENV['USER']}\n")
-      session.shell_write("mkdir /tmp/TaggedBy#{ENV['USER']}\n")
+      if File.exist?("/data/data/com.termux/files/usr/tmp")
+        session.shell_write("mkdir /data/data/com.termux/files/usr/tmp/TaggedBy#{ENV['USER']}\n")
+      else
+        session.shell_write("mkdir /tmp/TaggedBy#{ENV['USER']}\n")
+      end
     end
 
     #

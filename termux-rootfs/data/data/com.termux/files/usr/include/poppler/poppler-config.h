@@ -33,7 +33,7 @@
 
 /* Defines the poppler version. */
 #ifndef POPPLER_VERSION
-#define POPPLER_VERSION "0.61.1"
+#define POPPLER_VERSION "0.62.0"
 #endif
 
 /* Enable multithreading support. */

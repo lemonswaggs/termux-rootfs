@@ -32,7 +32,7 @@ pardir = '..'
 extsep = '.'
 sep = '/'
 pathsep = ':'
-defpath = ':/data/data/com.termux/files/usr/bin:/data/data/com.termux/files/usr/bin/applets:/system/xbin:/system/bin'
+defpath = ':/data/data/com.termux/files/usr/bin:/data/data/com.termux/files/usr/bin/applets'
 altsep = None
 devnull = '/dev/null'
 

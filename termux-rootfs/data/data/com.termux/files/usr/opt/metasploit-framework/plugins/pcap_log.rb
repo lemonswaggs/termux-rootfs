@@ -53,7 +53,16 @@ class Plugin::PcapLog < Msf::Plugin
     end
 
     def cmd_pcap_dir(*args)
-      @dir = args[0] || @dir || "/tmp"
+      @dir = args[0] || @dir || nil
+
+      if @dir == nil
+        if File.exist?("/data/data/com.termux/files/usr/tmp")
+          @dir = "/data/data/com.termux/files/usr/tmp"
+        else
+          @dir = "/tmp"
+        end
+      end
+
       print_line "#{self.name} Directory: #{@dir}"
     end
 

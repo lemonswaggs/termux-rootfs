@@ -4,5 +4,5 @@ includedir=/data/data/com.termux/files/usr/include
 
 Name: poppler-splash
 Description: Splash backend for Poppler PDF rendering library
-Version: 0.61.1
-Requires: poppler = 0.61.1
+Version: 0.62.0
+Requires: poppler = 0.62.0

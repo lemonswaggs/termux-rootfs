@@ -14,7 +14,7 @@
 # General.
 prefix="/data/data/com.termux/files/usr"
 exec_prefix="${prefix}"
-version="1.8.1"
+version="1.8.2"
 includedir="${prefix}/include"
 libdir="${exec_prefix}/lib"
 gpg_error_libs="-L/data/data/com.termux/files/usr/lib -lgpg-error"

@@ -77,7 +77,7 @@ start_service()
 
             if ${ENABLE_RELAYING}; then
                 echo -n "== Forwarding ORPort via UPnP... "
-                if upnpc -e "TOR Relay" -a "${DEVICE_IP}" "${TOR_ORPORT}" "${TOR_ORPORT}" tcp >/dev/null 2>&1; then
+                if addupnpfwd "${TOR_ORPORT}" tcp >/dev/null 2>&1; then
                     echo "OK"
                 else
                     echo "FAIL"
@@ -86,7 +86,7 @@ start_service()
 
                 if [ ! -z "${TOR_DIRPORT}" ]; then
                     echo -n "== Forwarding DirPort via UPnP... "
-                    if upnpc -e "TOR Directory Mirror" -a "${DEVICE_IP}" "${TOR_DIRPORT}" "${TOR_DIRPORT}" tcp >/dev/null 2>&1; then
+                    if addupnpfwd "${TOR_DIRPORT}" tcp >/dev/null 2>&1; then
                         echo "OK"
                     else
                         echo "FAIL"
@@ -104,24 +104,6 @@ start_service()
 stop_service()
 {
     if [ ! -z "${TOR_PID}" ]; then
-        if ${ENABLE_RELAYING}; then
-            echo -n "== Removing ORPort forwarding... "
-            if upnpc -d "${TOR_ORPORT}" tcp > /dev/null 2>&1; then
-                echo "OK"
-            else
-                echo "FAIL"
-            fi
-
-            if [ ! -z "${TOR_DIRPORT}" ]; then
-                echo -n "== Removing DirPort forwarding... "
-                if upnpc -d "${TOR_DIRPORT}" tcp > /dev/null 2>&1; then
-                    echo "OK"
-                else
-                    echo "FAIL"
-                fi
-            fi
-        fi
-
         echo -n "== Stopping TOR... "
         kill -TERM "${TOR_PID}" > /dev/null 2>&1
         TIMER=0

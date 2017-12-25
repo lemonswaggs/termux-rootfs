@@ -52,6 +52,9 @@ if [ "${1}" = "configure" ]; then
     # update font cache
     fc-cache > /dev/null 2>&1
 
+    # update mimeinfo.cache
+    update-desktop-database "${PREFIX}/share/applications" > /dev/null 2>&1
+
     # show message after installation is completed
     if [ ! -e "${PREFIX}/var/lib/termux-rootfs/termux-rootfs_configured" ]; then
         echo

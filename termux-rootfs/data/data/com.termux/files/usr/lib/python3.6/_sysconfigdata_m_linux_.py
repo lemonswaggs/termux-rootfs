@@ -13,9 +13,9 @@ build_time_vars = {'ABIFLAGS': 'm',
  'BLDLIBRARY': '-L. -lpython3.6m',
  'BLDSHARED': 'aarch64-linux-android-clang -shared '
               '-L/data/data/com.termux/files/usr/lib -landroid-support '
-              '-L/home/builder/.termux-build/_lib/15.2-aarch64-21-v14/sysroot/usr/lib '
+              '-L/home/builder/.termux-build/_lib/16-aarch64-21-v3/sysroot/usr/lib '
               '-L/data/data/com.termux/files/usr/lib -landroid-support '
-              '-L/home/builder/.termux-build/_lib/15.2-aarch64-21-v14/sysroot/usr/lib',
+              '-L/home/builder/.termux-build/_lib/16-aarch64-21-v3/sysroot/usr/lib',
  'BUILDEXE': '',
  'BUILDPYTHON': 'python',
  'BUILD_GNU_TYPE': 'x86_64-pc-linux-gnu',
@@ -23,21 +23,23 @@ build_time_vars = {'ABIFLAGS': 'm',
  'CC': 'aarch64-linux-android-clang',
  'CCSHARED': '-fPIC',
  'CFLAGS': '-Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g '
-           '-fwrapv -O3 -Wall -Wstrict-prototypes -Oz  -Oz',
+           '-fwrapv -O3 -Wall -Wstrict-prototypes -Oz -fstack-protector-strong '
+           '--param ssp-buffer-size=4  -Oz -fstack-protector-strong --param '
+           'ssp-buffer-size=4',
  'CFLAGSFORSHARED': '-fPIC',
  'CFLAGS_ALIASING': '-fno-strict-aliasing',
  'CFLAGS_NODIST': '',
  'CONFIGFILES': 'configure configure.ac acconfig.h pyconfig.h.in '
                 'Makefile.pre.in',
- 'CONFIGURE_CFLAGS': '-Oz',
+ 'CONFIGURE_CFLAGS': '-Oz -fstack-protector-strong --param ssp-buffer-size=4',
  'CONFIGURE_CFLAGS_NODIST': '-std=c99 -Wextra -Wno-unused-result '
                             '-Wno-unused-parameter '
                             '-Wno-missing-field-initializers',
  'CONFIGURE_CPPFLAGS': '-I/data/data/com.termux/files/usr/include -isystem '
                        '/data/data/com.termux/files/usr/include/libandroid-support '
-                       '-I/home/builder/.termux-build/_lib/15.2-aarch64-21-v14/sysroot/usr/include',
+                       '-I/home/builder/.termux-build/_lib/16-aarch64-21-v3/sysroot/usr/include',
  'CONFIGURE_LDFLAGS': '-L/data/data/com.termux/files/usr/lib -landroid-support '
-                      '-L/home/builder/.termux-build/_lib/15.2-aarch64-21-v14/sysroot/usr/lib',
+                      '-L/home/builder/.termux-build/_lib/16-aarch64-21-v3/sysroot/usr/lib',
  'CONFIG_ARGS': "'--disable-dependency-tracking' "
                 "'--prefix=/data/data/com.termux/files/usr' '--disable-rpath' "
                 "'--disable-rpath-hack' '--host=aarch64-linux-android' "
@@ -53,15 +55,16 @@ build_time_vars = {'ABIFLAGS': 'm',
                 "'--libexecdir=/data/data/com.termux/files/usr/libexec' "
                 "'build_alias=x86_64-pc-linux-gnu' "
                 "'host_alias=aarch64-linux-android' "
-                "'CC=aarch64-linux-android-clang' 'CFLAGS= -Oz' "
+                "'CC=aarch64-linux-android-clang' 'CFLAGS= -Oz "
+                "-fstack-protector-strong --param ssp-buffer-size=4' "
                 "'LDFLAGS=-L/data/data/com.termux/files/usr/lib "
                 '-landroid-support '
-                "-L/home/builder/.termux-build/_lib/15.2-aarch64-21-v14/sysroot/usr/lib' "
+                "-L/home/builder/.termux-build/_lib/16-aarch64-21-v3/sysroot/usr/lib' "
                 "'CPPFLAGS=-I/data/data/com.termux/files/usr/include -isystem "
                 '/data/data/com.termux/files/usr/include/libandroid-support '
-                "-I/home/builder/.termux-build/_lib/15.2-aarch64-21-v14/sysroot/usr/include' "
+                "-I/home/builder/.termux-build/_lib/16-aarch64-21-v3/sysroot/usr/include' "
                 "'CPP=aarch64-linux-android-cpp' "
-                "'PKG_CONFIG=/home/builder/.termux-build/_lib/15.2-aarch64-21-v14/bin/aarch64-linux-android-pkg-config' "
+                "'PKG_CONFIG=/home/builder/.termux-build/_lib/16-aarch64-21-v3/bin/aarch64-linux-android-pkg-config' "
                 "'PKG_CONFIG_LIBDIR=/data/data/com.termux/files/usr/lib/pkgconfig'",
  'CONFINCLUDEDIR': '/data/data/com.termux/files/usr/include',
  'CONFINCLUDEPY': '/data/data/com.termux/files/usr/include/python3.6m',
@@ -74,10 +77,10 @@ build_time_vars = {'ABIFLAGS': 'm',
              '-I/home/builder/.termux-build/python/src/Include '
              '-I/data/data/com.termux/files/usr/include -isystem '
              '/data/data/com.termux/files/usr/include/libandroid-support '
-             '-I/home/builder/.termux-build/_lib/15.2-aarch64-21-v14/sysroot/usr/include '
+             '-I/home/builder/.termux-build/_lib/16-aarch64-21-v3/sysroot/usr/include '
              '-I/data/data/com.termux/files/usr/include -isystem '
              '/data/data/com.termux/files/usr/include/libandroid-support '
-             '-I/home/builder/.termux-build/_lib/15.2-aarch64-21-v14/sysroot/usr/include',
+             '-I/home/builder/.termux-build/_lib/16-aarch64-21-v3/sysroot/usr/include',
  'CXX': 'aarch64-linux-android-clang++',
  'DESTDIRS': '/data/data/com.termux/files/usr '
              '/data/data/com.termux/files/usr/lib '
@@ -154,10 +157,18 @@ build_time_vars = {'ABIFLAGS': 'm',
  'HAVE_COPYSIGN': 1,
  'HAVE_CTERMID': 0,
  'HAVE_CTERMID_R': 0,
+ 'HAVE_CURSES_FILTER': 1,
  'HAVE_CURSES_H': 1,
+ 'HAVE_CURSES_HAS_KEY': 1,
+ 'HAVE_CURSES_IMMEDOK': 1,
+ 'HAVE_CURSES_IS_PAD': 1,
  'HAVE_CURSES_IS_TERM_RESIZED': 1,
  'HAVE_CURSES_RESIZETERM': 1,
  'HAVE_CURSES_RESIZE_TERM': 1,
+ 'HAVE_CURSES_SYNCOK': 1,
+ 'HAVE_CURSES_TYPEAHEAD': 1,
+ 'HAVE_CURSES_USE_ENV': 1,
+ 'HAVE_CURSES_WCHGAT': 1,
  'HAVE_DECL_ISFINITE': 1,
  'HAVE_DECL_ISINF': 1,
  'HAVE_DECL_ISNAN': 1,
@@ -443,7 +454,7 @@ build_time_vars = {'ABIFLAGS': 'm',
  'HAVE_SYS_NDIR_H': 0,
  'HAVE_SYS_PARAM_H': 1,
  'HAVE_SYS_POLL_H': 1,
- 'HAVE_SYS_RANDOM_H': 0,
+ 'HAVE_SYS_RANDOM_H': 1,
  'HAVE_SYS_RESOURCE_H': 1,
  'HAVE_SYS_SELECT_H': 1,
  'HAVE_SYS_SENDFILE_H': 1,
@@ -516,17 +527,17 @@ build_time_vars = {'ABIFLAGS': 'm',
  'IO_OBJS': '\\',
  'LDCXXSHARED': 'aarch64-linux-android-clang++ -shared',
  'LDFLAGS': '-L/data/data/com.termux/files/usr/lib -landroid-support '
-            '-L/home/builder/.termux-build/_lib/15.2-aarch64-21-v14/sysroot/usr/lib '
+            '-L/home/builder/.termux-build/_lib/16-aarch64-21-v3/sysroot/usr/lib '
             '-L/data/data/com.termux/files/usr/lib -landroid-support '
-            '-L/home/builder/.termux-build/_lib/15.2-aarch64-21-v14/sysroot/usr/lib',
+            '-L/home/builder/.termux-build/_lib/16-aarch64-21-v3/sysroot/usr/lib',
  'LDLAST': '',
  'LDLIBRARY': 'libpython3.6m.so',
  'LDLIBRARYDIR': '',
  'LDSHARED': 'aarch64-linux-android-clang -shared '
              '-L/data/data/com.termux/files/usr/lib -landroid-support '
-             '-L/home/builder/.termux-build/_lib/15.2-aarch64-21-v14/sysroot/usr/lib '
+             '-L/home/builder/.termux-build/_lib/16-aarch64-21-v3/sysroot/usr/lib '
              '-L/data/data/com.termux/files/usr/lib -landroid-support '
-             '-L/home/builder/.termux-build/_lib/15.2-aarch64-21-v14/sysroot/usr/lib',
+             '-L/home/builder/.termux-build/_lib/16-aarch64-21-v3/sysroot/usr/lib',
  'LDVERSION': '3.6m',
  'LIBC': '',
  'LIBDEST': '/data/data/com.termux/files/usr/lib/python3.6',
@@ -625,35 +636,39 @@ build_time_vars = {'ABIFLAGS': 'm',
  'PYTHON_HEADERS': '\\',
  'PYTHON_OBJS': '\\',
  'PY_CFLAGS': '-Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG '
-              '-g -fwrapv -O3 -Wall -Wstrict-prototypes -Oz  -Oz',
+              '-g -fwrapv -O3 -Wall -Wstrict-prototypes -Oz '
+              '-fstack-protector-strong --param ssp-buffer-size=4  -Oz '
+              '-fstack-protector-strong --param ssp-buffer-size=4',
  'PY_CFLAGS_NODIST': '-std=c99 -Wextra -Wno-unused-result '
                      '-Wno-unused-parameter -Wno-missing-field-initializers',
  'PY_CORE_CFLAGS': '-Wno-unused-result -Wsign-compare -Wunreachable-code '
-                   '-DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -Oz  -Oz '
+                   '-DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -Oz '
+                   '-fstack-protector-strong --param ssp-buffer-size=4  -Oz '
+                   '-fstack-protector-strong --param ssp-buffer-size=4 '
                    '-std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter '
                    '-Wno-missing-field-initializers -IObjects -IInclude '
                    '-IPython -I. '
                    '-I/home/builder/.termux-build/python/src/Include '
                    '-I/data/data/com.termux/files/usr/include -isystem '
                    '/data/data/com.termux/files/usr/include/libandroid-support '
-                   '-I/home/builder/.termux-build/_lib/15.2-aarch64-21-v14/sysroot/usr/include '
+                   '-I/home/builder/.termux-build/_lib/16-aarch64-21-v3/sysroot/usr/include '
                    '-I/data/data/com.termux/files/usr/include -isystem '
                    '/data/data/com.termux/files/usr/include/libandroid-support '
-                   '-I/home/builder/.termux-build/_lib/15.2-aarch64-21-v14/sysroot/usr/include '
+                   '-I/home/builder/.termux-build/_lib/16-aarch64-21-v3/sysroot/usr/include '
                    '-fPIC -DPy_BUILD_CORE',
  'PY_CPPFLAGS': '-IObjects -IInclude -IPython -I. '
                 '-I/home/builder/.termux-build/python/src/Include '
                 '-I/data/data/com.termux/files/usr/include -isystem '
                 '/data/data/com.termux/files/usr/include/libandroid-support '
-                '-I/home/builder/.termux-build/_lib/15.2-aarch64-21-v14/sysroot/usr/include '
+                '-I/home/builder/.termux-build/_lib/16-aarch64-21-v3/sysroot/usr/include '
                 '-I/data/data/com.termux/files/usr/include -isystem '
                 '/data/data/com.termux/files/usr/include/libandroid-support '
-                '-I/home/builder/.termux-build/_lib/15.2-aarch64-21-v14/sysroot/usr/include',
+                '-I/home/builder/.termux-build/_lib/16-aarch64-21-v3/sysroot/usr/include',
  'PY_FORMAT_SIZE_T': '"z"',
  'PY_LDFLAGS': '-L/data/data/com.termux/files/usr/lib -landroid-support '
-               '-L/home/builder/.termux-build/_lib/15.2-aarch64-21-v14/sysroot/usr/lib '
+               '-L/home/builder/.termux-build/_lib/16-aarch64-21-v3/sysroot/usr/lib '
                '-L/data/data/com.termux/files/usr/lib -landroid-support '
-               '-L/home/builder/.termux-build/_lib/15.2-aarch64-21-v14/sysroot/usr/lib',
+               '-L/home/builder/.termux-build/_lib/16-aarch64-21-v3/sysroot/usr/lib',
  'Py_DEBUG': 0,
  'Py_ENABLE_SHARED': 1,
  'Py_HASH_ALGORITHM': 0,
@@ -689,7 +704,7 @@ build_time_vars = {'ABIFLAGS': 'm',
  'SIZEOF_WCHAR_T': 4,
  'SIZEOF__BOOL': 1,
  'SOABI': 'cpython-36m',
- 'SRCDIRS': 'Parser Grammar Objects Python Modules Mac Programs',
+ 'SRCDIRS': 'Parser Objects Python Modules Programs',
  'SRC_GDB_HOOKS': '/home/builder/.termux-build/python/src/Tools/gdb/libpython.py',
  'STDC_HEADERS': 1,
  'STRICT_SYSV_CURSES': "/* Don't use ncurses extensions */",
@@ -714,6 +729,8 @@ build_time_vars = {'ABIFLAGS': 'm',
  'TM_IN_SYS_TIME': 0,
  'UNICODE_DEPS': '\\',
  'UNIVERSALSDK': '',
+ 'UPDATE_FILE': 'python3.6 '
+                '/home/builder/.termux-build/python/src/Tools/scripts/update_file.py',
  'USE_COMPUTED_GOTOS': 0,
  'USE_INLINE': 1,
  'VERSION': '3.6',

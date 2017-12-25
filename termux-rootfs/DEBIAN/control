@@ -1,7 +1,7 @@
 Package: termux-rootfs
 Maintainer: Leonid Plyushch <leonid.plyushch@gmail.com>
 Architecture: aarch64
-Installed-Size: 3394276
+Installed-Size: 3402912
 Version: 4.12
 Essential: yes
 Description: A static environment for Termux

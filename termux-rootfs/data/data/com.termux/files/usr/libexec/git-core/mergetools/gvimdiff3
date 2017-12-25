@@ -1,1 +1,1 @@
-. "$MERGE_TOOLS_DIR/vimdiff"
+gvimdiff

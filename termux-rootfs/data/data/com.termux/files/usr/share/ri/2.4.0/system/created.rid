@@ -1,4 +1,4 @@
-Fri, 15 Sep 2017 13:20:33 +0000
+Sun, 24 Dec 2017 14:21:36 +0000
 /home/builder/.termux-build/ruby/src/sprintf.c	Tue, 09 May 2017 14:46:24 +0000
 /home/builder/.termux-build/ruby/src/regerror.c	Sat, 10 Dec 2016 17:47:04 +0000
 /home/builder/.termux-build/ruby/src/hash.c	Sun, 12 Mar 2017 16:20:03 +0000
@@ -9,9 +9,9 @@ Fri, 15 Sep 2017 13:20:33 +0000
 /home/builder/.termux-build/ruby/src/complex.c	Tue, 22 Nov 2016 05:21:12 +0000
 /home/builder/.termux-build/ruby/src/re.c	Tue, 20 Dec 2016 07:32:23 +0000
 /home/builder/.termux-build/ruby/src/variable.c	Sun, 09 Jul 2017 20:46:10 +0000
-/home/builder/.termux-build/ruby/src/id.c	Thu, 14 Sep 2017 12:52:36 +0000
+/home/builder/.termux-build/ruby/src/id.c	Thu, 14 Dec 2017 14:36:25 +0000
 /home/builder/.termux-build/ruby/src/transcode.c	Tue, 16 Aug 2016 02:18:51 +0000
-/home/builder/.termux-build/ruby/src/miniprelude.c	Thu, 14 Sep 2017 12:53:16 +0000
+/home/builder/.termux-build/ruby/src/miniprelude.c	Thu, 14 Dec 2017 14:37:04 +0000
 /home/builder/.termux-build/ruby/src/version.c	Thu, 07 Jan 2016 02:34:33 +0000
 /home/builder/.termux-build/ruby/src/time.c	Sat, 11 Mar 2017 10:17:35 +0000
 /home/builder/.termux-build/ruby/src/thread_sync.c	Sat, 11 Mar 2017 18:45:34 +0000
@@ -68,17 +68,17 @@ Fri, 15 Sep 2017 13:20:33 +0000
 /home/builder/.termux-build/ruby/src/encoding.c	Wed, 14 Dec 2016 12:32:42 +0000
 /home/builder/.termux-build/ruby/src/range.c	Fri, 11 Nov 2016 11:52:03 +0000
 /home/builder/.termux-build/ruby/src/eval_jump.c	Fri, 22 Apr 2016 06:09:29 +0000
-/home/builder/.termux-build/ruby/src/lex.c	Thu, 14 Sep 2017 12:52:36 +0000
+/home/builder/.termux-build/ruby/src/lex.c	Thu, 14 Dec 2017 14:36:25 +0000
 /home/builder/.termux-build/ruby/src/string.c	Sun, 10 Sep 2017 12:17:49 +0000
 /home/builder/.termux-build/ruby/src/vsnprintf.c	Sun, 09 Jul 2017 20:02:04 +0000
 /home/builder/.termux-build/ruby/src/enum.c	Sat, 05 Aug 2017 03:24:54 +0000
 /home/builder/.termux-build/ruby/src/rubystub.c	Sat, 20 Aug 2016 05:58:58 +0000
 /home/builder/.termux-build/ruby/src/vm.c	Sat, 05 Aug 2017 06:35:02 +0000
 /home/builder/.termux-build/ruby/src/siphash.c	Wed, 23 Jul 2014 14:50:12 +0000
-/home/builder/.termux-build/ruby/src/golf_prelude.c	Thu, 14 Sep 2017 12:53:16 +0000
-/home/builder/.termux-build/ruby/src/parse.c	Thu, 14 Sep 2017 12:52:36 +0000
+/home/builder/.termux-build/ruby/src/golf_prelude.c	Thu, 14 Dec 2017 14:37:04 +0000
+/home/builder/.termux-build/ruby/src/parse.c	Thu, 14 Dec 2017 14:36:25 +0000
 /home/builder/.termux-build/ruby/src/miniinit.c	Sat, 26 Dec 2015 02:26:40 +0000
-/home/builder/.termux-build/ruby/src/prelude.c	Thu, 14 Sep 2017 12:53:16 +0000
+/home/builder/.termux-build/ruby/src/prelude.c	Thu, 14 Dec 2017 14:37:04 +0000
 /home/builder/.termux-build/ruby/src/marshal.c	Mon, 13 Mar 2017 07:30:30 +0000
 /home/builder/.termux-build/ruby/src/eval_error.c	Wed, 07 Dec 2016 23:27:51 +0000
 /home/builder/.termux-build/ruby/src/sparc.c	Sat, 27 Apr 2013 10:06:20 +0000
@@ -86,10 +86,10 @@ Fri, 15 Sep 2017 13:20:33 +0000
 /home/builder/.termux-build/ruby/src/eval.c	Sun, 12 Mar 2017 18:01:22 +0000
 /home/builder/.termux-build/ruby/src/thread.c	Sat, 05 Aug 2017 06:35:02 +0000
 /home/builder/.termux-build/ruby/src/regcomp.c	Mon, 13 Mar 2017 09:05:46 +0000
-/home/builder/.termux-build/ruby/src/addr2line.c	Fri, 15 Sep 2017 13:18:10 +0000
-/home/builder/.termux-build/ruby/src/dln_find.c	Fri, 15 Sep 2017 13:18:10 +0000
-/home/builder/.termux-build/ruby/src/process.c	Fri, 15 Sep 2017 13:18:10 +0000
-/home/builder/.termux-build/ruby/src/signal.c	Fri, 15 Sep 2017 13:18:10 +0000
+/home/builder/.termux-build/ruby/src/addr2line.c	Sun, 24 Dec 2017 14:18:28 +0000
+/home/builder/.termux-build/ruby/src/dln_find.c	Sun, 24 Dec 2017 14:18:28 +0000
+/home/builder/.termux-build/ruby/src/process.c	Sun, 24 Dec 2017 14:18:28 +0000
+/home/builder/.termux-build/ruby/src/signal.c	Sun, 24 Dec 2017 14:18:28 +0000
 /home/builder/.termux-build/ruby/src/prelude.rb	Sun, 12 Mar 2017 07:53:34 +0000
 /home/builder/.termux-build/ruby/src/lib/unicode_normalize/normalize.rb	Wed, 16 Dec 2015 05:07:31 +0000
 /home/builder/.termux-build/ruby/src/lib/unicode_normalize/tables.rb	Wed, 07 Sep 2016 08:13:08 +0000
@@ -147,9 +147,9 @@ Fri, 15 Sep 2017 13:20:33 +0000
 /home/builder/.termux-build/ruby/src/lib/benchmark.rb	Wed, 23 Dec 2015 03:43:23 +0000
 /home/builder/.termux-build/ruby/src/lib/ubygems.rb	Fri, 04 Mar 2016 00:29:40 +0000
 /home/builder/.termux-build/ruby/src/lib/erb.rb	Sun, 09 Jul 2017 20:06:31 +0000
-/home/builder/.termux-build/ruby/src/lib/webrick/server.rb	Wed, 23 Nov 2016 23:14:15 +0000
+/home/builder/.termux-build/ruby/src/lib/webrick/server.rb	Thu, 14 Dec 2017 13:31:41 +0000
 /home/builder/.termux-build/ruby/src/lib/webrick/httpservlet.rb	Wed, 16 Dec 2015 05:07:31 +0000
-/home/builder/.termux-build/ruby/src/lib/webrick/httpserver.rb	Wed, 16 Dec 2015 05:07:31 +0000
+/home/builder/.termux-build/ruby/src/lib/webrick/httpserver.rb	Thu, 14 Dec 2017 13:14:12 +0000
 /home/builder/.termux-build/ruby/src/lib/webrick/httpproxy.rb	Sun, 10 Jan 2016 00:35:43 +0000
 /home/builder/.termux-build/ruby/src/lib/webrick/cgi.rb	Wed, 16 Dec 2015 05:07:31 +0000
 /home/builder/.termux-build/ruby/src/lib/webrick/httpauth/basicauth.rb	Wed, 16 Dec 2015 05:07:31 +0000
@@ -180,7 +180,7 @@ Fri, 15 Sep 2017 13:20:33 +0000
 /home/builder/.termux-build/ruby/src/lib/webrick/httpservlet/erbhandler.rb	Wed, 16 Dec 2015 05:07:31 +0000
 /home/builder/.termux-build/ruby/src/lib/webrick/httpservlet/prochandler.rb	Wed, 16 Dec 2015 05:07:31 +0000
 /home/builder/.termux-build/ruby/src/lib/webrick/httpservlet/abstract.rb	Wed, 16 Dec 2015 05:07:31 +0000
-/home/builder/.termux-build/ruby/src/lib/webrick/config.rb	Fri, 15 Sep 2017 13:18:10 +0000
+/home/builder/.termux-build/ruby/src/lib/webrick/config.rb	Sun, 24 Dec 2017 14:18:28 +0000
 /home/builder/.termux-build/ruby/src/lib/matrix.rb	Tue, 29 Nov 2016 15:23:12 +0000
 /home/builder/.termux-build/ruby/src/lib/shellwords.rb	Sat, 05 Nov 2016 04:58:48 +0000
 /home/builder/.termux-build/ruby/src/lib/uri.rb	Wed, 16 Dec 2015 05:07:31 +0000
@@ -204,7 +204,7 @@ Fri, 15 Sep 2017 13:20:33 +0000
 /home/builder/.termux-build/ruby/src/lib/observer.rb	Wed, 16 Dec 2015 05:07:31 +0000
 /home/builder/.termux-build/ruby/src/lib/mutex_m.rb	Tue, 30 Aug 2016 06:22:30 +0000
 /home/builder/.termux-build/ruby/src/lib/net/protocol.rb	Mon, 14 Nov 2016 07:53:32 +0000
-/home/builder/.termux-build/ruby/src/lib/net/ftp.rb	Tue, 29 Nov 2016 08:44:21 +0000
+/home/builder/.termux-build/ruby/src/lib/net/ftp.rb	Thu, 14 Dec 2017 13:51:34 +0000
 /home/builder/.termux-build/ruby/src/lib/net/http.rb	Mon, 21 Nov 2016 23:05:41 +0000
 /home/builder/.termux-build/ruby/src/lib/net/https.rb	Wed, 16 Dec 2015 05:07:31 +0000
 /home/builder/.termux-build/ruby/src/lib/net/http/header.rb	Fri, 08 Sep 2017 14:27:38 +0000
@@ -298,6 +298,7 @@ Fri, 15 Sep 2017 13:20:33 +0000
 /home/builder/.termux-build/ruby/src/lib/rubygems/request.rb	Sun, 30 Oct 2016 06:32:48 +0000
 /home/builder/.termux-build/ruby/src/lib/rubygems/dependency_list.rb	Sun, 10 Sep 2017 05:10:55 +0000
 /home/builder/.termux-build/ruby/src/lib/rubygems/deprecate.rb	Mon, 01 Feb 2016 12:43:26 +0000
+/home/builder/.termux-build/ruby/src/lib/rubygems/safe_yaml.rb	Wed, 11 Oct 2017 13:48:14 +0000
 /home/builder/.termux-build/ruby/src/lib/rubygems/commands/setup_command.rb	Mon, 13 Mar 2017 06:58:19 +0000
 /home/builder/.termux-build/ruby/src/lib/rubygems/commands/query_command.rb	Sun, 10 Sep 2017 05:23:13 +0000
 /home/builder/.termux-build/ruby/src/lib/rubygems/commands/mirror_command.rb	Mon, 01 Feb 2016 12:43:26 +0000
@@ -344,7 +345,7 @@ Fri, 15 Sep 2017 13:20:33 +0000
 /home/builder/.termux-build/ruby/src/lib/rubygems/package/tar_writer.rb	Sat, 18 Jun 2016 05:11:55 +0000
 /home/builder/.termux-build/ruby/src/lib/rubygems/package/digest_io.rb	Mon, 01 Feb 2016 12:43:26 +0000
 /home/builder/.termux-build/ruby/src/lib/rubygems/package/source.rb	Mon, 01 Feb 2016 12:43:26 +0000
-/home/builder/.termux-build/ruby/src/lib/rubygems/package/old.rb	Mon, 01 Feb 2016 12:43:26 +0000
+/home/builder/.termux-build/ruby/src/lib/rubygems/package/old.rb	Wed, 11 Oct 2017 13:48:14 +0000
 /home/builder/.termux-build/ruby/src/lib/rubygems/package/tar_header.rb	Tue, 02 Feb 2016 00:11:34 +0000
 /home/builder/.termux-build/ruby/src/lib/rubygems/package/io_source.rb	Mon, 01 Feb 2016 12:43:26 +0000
 /home/builder/.termux-build/ruby/src/lib/rubygems/test_utilities.rb	Mon, 01 Feb 2016 12:43:26 +0000
@@ -353,7 +354,7 @@ Fri, 15 Sep 2017 13:20:33 +0000
 /home/builder/.termux-build/ruby/src/lib/rubygems/spec_fetcher.rb	Wed, 28 Sep 2016 01:16:43 +0000
 /home/builder/.termux-build/ruby/src/lib/rubygems/dependency.rb	Sun, 30 Oct 2016 06:32:48 +0000
 /home/builder/.termux-build/ruby/src/lib/rubygems/version.rb	Mon, 13 Mar 2017 06:58:19 +0000
-/home/builder/.termux-build/ruby/src/lib/rubygems/package.rb	Sat, 18 Jun 2016 05:11:55 +0000
+/home/builder/.termux-build/ruby/src/lib/rubygems/package.rb	Wed, 11 Oct 2017 13:48:14 +0000
 /home/builder/.termux-build/ruby/src/lib/rubygems/test_case.rb	Sun, 10 Sep 2017 05:10:55 +0000
 /home/builder/.termux-build/ruby/src/lib/rubygems/package_task.rb	Mon, 01 Feb 2016 12:43:26 +0000
 /home/builder/.termux-build/ruby/src/lib/rubygems/install_message.rb	Mon, 01 Feb 2016 12:43:26 +0000
@@ -390,7 +391,7 @@ Fri, 15 Sep 2017 13:20:33 +0000
 /home/builder/.termux-build/ruby/src/lib/rubygems/user_interaction.rb	Wed, 28 Sep 2016 01:16:43 +0000
 /home/builder/.termux-build/ruby/src/lib/rubygems/gemcutter_utilities.rb	Fri, 04 Mar 2016 00:29:40 +0000
 /home/builder/.termux-build/ruby/src/lib/rubygems/installer_test_case.rb	Mon, 28 Mar 2016 02:26:39 +0000
-/home/builder/.termux-build/ruby/src/lib/rubygems/specification.rb	Sun, 10 Sep 2017 05:23:13 +0000
+/home/builder/.termux-build/ruby/src/lib/rubygems/specification.rb	Wed, 11 Oct 2017 13:48:14 +0000
 /home/builder/.termux-build/ruby/src/lib/rubygems/syck_hack.rb	Mon, 01 Feb 2016 12:43:26 +0000
 /home/builder/.termux-build/ruby/src/lib/rubygems/rdoc.rb	Mon, 01 Feb 2016 12:43:26 +0000
 /home/builder/.termux-build/ruby/src/lib/rubygems/requirement.rb	Mon, 01 Feb 2016 12:43:26 +0000
@@ -404,10 +405,10 @@ Fri, 15 Sep 2017 13:20:33 +0000
 /home/builder/.termux-build/ruby/src/lib/rubygems/ext.rb	Mon, 01 Feb 2016 12:43:26 +0000
 /home/builder/.termux-build/ruby/src/lib/rubygems/remote_fetcher.rb	Sun, 10 Sep 2017 05:23:13 +0000
 /home/builder/.termux-build/ruby/src/lib/rubygems/LICENSE.txt	Tue, 19 Nov 2013 00:34:13 +0000
-/home/builder/.termux-build/ruby/src/lib/rubygems/config_file.rb	Fri, 15 Sep 2017 13:18:10 +0000
-/home/builder/.termux-build/ruby/src/lib/rubygems/defaults.rb	Fri, 15 Sep 2017 13:18:10 +0000
-/home/builder/.termux-build/ruby/src/lib/rubygems/install_update_options.rb	Fri, 15 Sep 2017 13:18:10 +0000
-/home/builder/.termux-build/ruby/src/lib/rubygems/installer.rb	Fri, 15 Sep 2017 13:18:10 +0000
+/home/builder/.termux-build/ruby/src/lib/rubygems/config_file.rb	Sun, 24 Dec 2017 14:18:28 +0000
+/home/builder/.termux-build/ruby/src/lib/rubygems/defaults.rb	Sun, 24 Dec 2017 14:18:28 +0000
+/home/builder/.termux-build/ruby/src/lib/rubygems/install_update_options.rb	Sun, 24 Dec 2017 14:18:28 +0000
+/home/builder/.termux-build/ruby/src/lib/rubygems/installer.rb	Sun, 24 Dec 2017 14:18:28 +0000
 /home/builder/.termux-build/ruby/src/lib/find.rb	Fri, 19 Feb 2016 14:38:28 +0000
 /home/builder/.termux-build/ruby/src/lib/tracer.rb	Tue, 30 Aug 2016 06:22:30 +0000
 /home/builder/.termux-build/ruby/src/lib/getoptlong.rb	Sat, 09 Jul 2016 03:47:14 +0000
@@ -487,7 +488,7 @@ Fri, 15 Sep 2017 13:20:33 +0000
 /home/builder/.termux-build/ruby/src/lib/drb/unix.rb	Wed, 16 Dec 2015 05:07:31 +0000
 /home/builder/.termux-build/ruby/src/lib/drb/extservm.rb	Tue, 30 Aug 2016 06:22:30 +0000
 /home/builder/.termux-build/ruby/src/lib/drb/eq.rb	Wed, 16 Dec 2015 05:07:31 +0000
-/home/builder/.termux-build/ruby/src/lib/drb/gw.rb	Fri, 15 Sep 2017 13:18:10 +0000
+/home/builder/.termux-build/ruby/src/lib/drb/gw.rb	Sun, 24 Dec 2017 14:18:28 +0000
 /home/builder/.termux-build/ruby/src/lib/optparse/shellwords.rb	Wed, 16 Dec 2015 05:07:31 +0000
 /home/builder/.termux-build/ruby/src/lib/optparse/uri.rb	Wed, 16 Dec 2015 05:07:31 +0000
 /home/builder/.termux-build/ruby/src/lib/optparse/date.rb	Wed, 16 Dec 2015 05:07:31 +0000
@@ -601,12 +602,12 @@ Fri, 15 Sep 2017 13:20:33 +0000
 /home/builder/.termux-build/ruby/src/lib/shell/process-controller.rb	Mon, 21 Nov 2016 23:05:41 +0000
 /home/builder/.termux-build/ruby/src/lib/shell/filter.rb	Tue, 29 Nov 2016 16:06:54 +0000
 /home/builder/.termux-build/ruby/src/lib/shell/command-processor.rb	Wed, 16 Dec 2015 05:07:31 +0000
-/home/builder/.termux-build/ruby/src/lib/rubygems.rb	Sun, 10 Sep 2017 05:23:13 +0000
+/home/builder/.termux-build/ruby/src/lib/rubygems.rb	Wed, 11 Oct 2017 13:48:14 +0000
 /home/builder/.termux-build/ruby/src/lib/forwardable/impl.rb	Sun, 20 Nov 2016 02:12:48 +0000
 /home/builder/.termux-build/ruby/src/lib/scanf.rb	Wed, 16 Dec 2015 05:07:31 +0000
-/home/builder/.termux-build/ruby/src/lib/resolv.rb	Fri, 15 Sep 2017 13:18:10 +0000
-/home/builder/.termux-build/ruby/src/lib/tmpdir.rb	Fri, 15 Sep 2017 13:18:10 +0000
-/home/builder/.termux-build/ruby/src/lib/mkmf.rb	Fri, 15 Sep 2017 13:18:10 +0000
+/home/builder/.termux-build/ruby/src/lib/resolv.rb	Sun, 24 Dec 2017 14:18:28 +0000
+/home/builder/.termux-build/ruby/src/lib/tmpdir.rb	Sun, 24 Dec 2017 14:18:28 +0000
+/home/builder/.termux-build/ruby/src/lib/mkmf.rb	Sun, 24 Dec 2017 14:18:28 +0000
 /home/builder/.termux-build/ruby/src/ext/bigdecimal/bigdecimal.c	Sun, 10 Sep 2017 12:33:09 +0000
 /home/builder/.termux-build/ruby/src/ext/bigdecimal/lib/bigdecimal/newton.rb	Wed, 16 Dec 2015 05:31:54 +0000
 /home/builder/.termux-build/ruby/src/ext/bigdecimal/lib/bigdecimal/util.rb	Wed, 21 Dec 2016 15:35:29 +0000
@@ -624,7 +625,7 @@ Fri, 15 Sep 2017 13:20:33 +0000
 /home/builder/.termux-build/ruby/src/ext/digest/rmd160/rmd160init.c	Thu, 20 Oct 2016 07:57:31 +0000
 /home/builder/.termux-build/ruby/src/ext/digest/sha1/sha1init.c	Thu, 20 Oct 2016 07:57:31 +0000
 /home/builder/.termux-build/ruby/src/ext/digest/sha2/sha2init.c	Sat, 21 Nov 2015 04:35:57 +0000
-/home/builder/.termux-build/ruby/src/ext/etc/etc.c	Fri, 15 Sep 2017 13:18:10 +0000
+/home/builder/.termux-build/ruby/src/ext/etc/etc.c	Sun, 24 Dec 2017 14:18:28 +0000
 /home/builder/.termux-build/ruby/src/ext/fcntl/fcntl.c	Tue, 30 Sep 2014 05:25:32 +0000
 /home/builder/.termux-build/ruby/src/ext/fiber/fiber.c	Fri, 02 Oct 2009 10:45:39 +0000
 /home/builder/.termux-build/ruby/src/ext/fiddle/closure.c	Wed, 09 Dec 2015 01:01:17 +0000
@@ -753,7 +754,7 @@ Fri, 15 Sep 2017 13:20:33 +0000
 /home/builder/.termux-build/ruby/src/ext/psych/lib/psych/coder.rb	Wed, 16 Dec 2015 05:31:54 +0000
 /home/builder/.termux-build/ruby/src/ext/psych/psych.c	Sat, 04 Oct 2014 23:09:32 +0000
 /home/builder/.termux-build/ruby/src/ext/pty/lib/expect.rb	Wed, 16 Dec 2015 05:31:54 +0000
-/home/builder/.termux-build/ruby/src/ext/pty/pty.c	Fri, 15 Sep 2017 13:18:10 +0000
+/home/builder/.termux-build/ruby/src/ext/pty/pty.c	Sun, 24 Dec 2017 14:18:28 +0000
 /home/builder/.termux-build/ruby/src/ext/racc/cparse/cparse.c	Wed, 03 Dec 2014 00:48:59 +0000
 /home/builder/.termux-build/ruby/src/ext/readline/readline.c	Thu, 17 Nov 2016 11:52:11 +0000
 /home/builder/.termux-build/ruby/src/ext/ripper/lib/ripper/lexer.rb	Sat, 01 Jul 2017 11:51:13 +0000
@@ -761,12 +762,12 @@ Fri, 15 Sep 2017 13:20:33 +0000
 /home/builder/.termux-build/ruby/src/ext/ripper/lib/ripper/filter.rb	Wed, 16 Dec 2015 05:31:54 +0000
 /home/builder/.termux-build/ruby/src/ext/ripper/lib/ripper/sexp.rb	Wed, 16 Dec 2015 05:31:54 +0000
 /home/builder/.termux-build/ruby/src/ext/ripper/lib/ripper.rb	Wed, 16 Dec 2015 05:31:54 +0000
-/home/builder/.termux-build/ruby/src/ext/ripper/ripper.c	Thu, 14 Sep 2017 12:52:38 +0000
+/home/builder/.termux-build/ruby/src/ext/ripper/ripper.c	Thu, 14 Dec 2017 14:36:27 +0000
 /home/builder/.termux-build/ruby/src/ext/sdbm/init.c	Mon, 23 May 2016 04:31:55 +0000
 /home/builder/.termux-build/ruby/src/ext/socket/ancdata.c	Wed, 05 Oct 2016 03:57:32 +0000
 /home/builder/.termux-build/ruby/src/ext/socket/basicsocket.c	Wed, 26 Oct 2016 06:11:23 +0000
 /home/builder/.termux-build/ruby/src/ext/socket/constants.c	Tue, 14 Apr 2015 03:31:28 +0000
-/home/builder/.termux-build/ruby/src/ext/socket/constdefs.c	Thu, 14 Sep 2017 12:52:38 +0000
+/home/builder/.termux-build/ruby/src/ext/socket/constdefs.c	Thu, 14 Dec 2017 14:36:27 +0000
 /home/builder/.termux-build/ruby/src/ext/socket/ifaddr.c	Wed, 09 Dec 2015 20:07:23 +0000
 /home/builder/.termux-build/ruby/src/ext/socket/init.c	Wed, 23 Dec 2015 14:58:47 +0000
 /home/builder/.termux-build/ruby/src/ext/socket/ipsocket.c	Wed, 05 Oct 2016 03:57:32 +0000
@@ -797,7 +798,7 @@ Fri, 15 Sep 2017 13:20:33 +0000
 /home/builder/.termux-build/ruby/src/ext/win32ole/win32ole_event.c	Fri, 07 Oct 2016 10:24:56 +0000
 /home/builder/.termux-build/ruby/src/ext/win32ole/win32ole_param.c	Fri, 07 Oct 2016 10:24:56 +0000
 /home/builder/.termux-build/ruby/src/ext/zlib/zlib.c	Sun, 10 Sep 2017 02:40:45 +0000
-/home/builder/.termux-build/ruby/src/ChangeLog	Thu, 14 Sep 2017 12:52:15 +0000
+/home/builder/.termux-build/ruby/src/ChangeLog	Thu, 14 Dec 2017 14:36:06 +0000
 /home/builder/.termux-build/ruby/src/NEWS	Mon, 13 Mar 2017 09:05:46 +0000
 /home/builder/.termux-build/ruby/src/README.md	Sat, 11 Mar 2017 19:06:22 +0000
 /home/builder/.termux-build/ruby/src/README.ja.md	Tue, 13 Sep 2016 12:26:04 +0000

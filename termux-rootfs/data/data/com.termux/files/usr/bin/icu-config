@@ -64,7 +64,7 @@ datadir="${datarootdir}"
 sbindir="${exec_prefix}/sbin"
 
 # about the ICU version
-VERSION="60.1"
+VERSION="60.2"
 UNICODE_VERSION="10.0"
 
 # The prefix for ICU libraries, normally 'icu'
@@ -221,7 +221,7 @@ INSTALL_SCRIPT="${INSTALL}"
 LDFLAGS="${RPATHLDFLAGS}"
 LIBS="-lm  "
 LIB_M=""
-LIB_VERSION="60.1"
+LIB_VERSION="60.2"
 LIB_VERSION_MAJOR="60"
 MKINSTALLDIRS="${SHELL} ${pkgdatadir}/mkinstalldirs"
 RANLIB="aarch64-linux-android-ranlib"

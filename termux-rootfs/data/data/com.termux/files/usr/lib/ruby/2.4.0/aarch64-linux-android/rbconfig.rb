@@ -10,7 +10,7 @@
 
 module RbConfig
   RUBY_VERSION.start_with?("2.4.") or
-    raise "ruby lib version (2.4.2) doesn't match executable version (#{RUBY_VERSION})"
+    raise "ruby lib version (2.4.3) doesn't match executable version (#{RUBY_VERSION})"
 
   # Ruby installed directory.
   TOPDIR = File.dirname(__FILE__).chomp!("/lib/ruby/2.4.0/aarch64-linux-android")
@@ -21,8 +21,8 @@ module RbConfig
   CONFIG["DESTDIR"] = DESTDIR
   CONFIG["MAJOR"] = "2"
   CONFIG["MINOR"] = "4"
-  CONFIG["TEENY"] = "2"
-  CONFIG["PATCHLEVEL"] = "198"
+  CONFIG["TEENY"] = "3"
+  CONFIG["PATCHLEVEL"] = "205"
   CONFIG["INSTALL"] = "install -c"
   CONFIG["EXEEXT"] = ""
   CONFIG["prefix"] = (TOPDIR || DESTDIR + "/data/data/com.termux/files/usr")
@@ -45,7 +45,7 @@ module RbConfig
   CONFIG["RUBY_SEARCH_PATH"] = ""
   CONFIG["UNIVERSAL_INTS"] = ""
   CONFIG["UNIVERSAL_ARCHNAMES"] = ""
-  CONFIG["configure_args"] = " '--disable-dependency-tracking' '--prefix=/data/data/com.termux/files/usr' '--disable-rpath' '--disable-rpath-hack' '--host=aarch64-linux-android' 'ac_cv_func_setgroups=no' 'ac_cv_func_setresuid=no' 'ac_cv_func_setreuid=no' '--enable-rubygems' '--without-gdbm' 'ac_cv_lib_crypt_crypt=no' 'rb_cv_type_deprecated=x' '--disable-nls' '--enable-shared' '--disable-static' '--libexecdir=/data/data/com.termux/files/usr/libexec' 'host_alias=aarch64-linux-android' 'CC=aarch64-linux-android-clang' 'CFLAGS= -Oz' 'LDFLAGS=-L/data/data/com.termux/files/usr/lib -landroid-support' 'CPPFLAGS=-I/data/data/com.termux/files/usr/include -isystem /data/data/com.termux/files/usr/include/libandroid-support' 'CXX=aarch64-linux-android-clang++' 'CXXFLAGS= -Oz' 'CPP=aarch64-linux-android-cpp'"
+  CONFIG["configure_args"] = " '--disable-dependency-tracking' '--prefix=/data/data/com.termux/files/usr' '--disable-rpath' '--disable-rpath-hack' '--host=aarch64-linux-android' 'ac_cv_func_setgroups=no' 'ac_cv_func_setresuid=no' 'ac_cv_func_setreuid=no' '--enable-rubygems' '--without-gdbm' 'ac_cv_lib_crypt_crypt=no' 'rb_cv_type_deprecated=x' '--disable-nls' '--enable-shared' '--disable-static' '--libexecdir=/data/data/com.termux/files/usr/libexec' 'host_alias=aarch64-linux-android' 'CC=aarch64-linux-android-clang' 'CFLAGS= -Oz -fstack-protector-strong --param ssp-buffer-size=4' 'LDFLAGS=-L/data/data/com.termux/files/usr/lib -landroid-support' 'CPPFLAGS=-I/data/data/com.termux/files/usr/include -isystem /data/data/com.termux/files/usr/include/libandroid-support' 'CXX=aarch64-linux-android-clang++' 'CXXFLAGS= -Oz -fstack-protector-strong --param ssp-buffer-size=4' 'CPP=aarch64-linux-android-cpp'"
   CONFIG["CONFIGURE"] = "configure"
   CONFIG["vendorarchdir"] = "$(vendorlibdir)/$(sitearch)"
   CONFIG["vendorlibdir"] = "$(vendordir)/$(ruby_version)"
@@ -160,7 +160,7 @@ module RbConfig
   CONFIG["AR"] = "aarch64-linux-android-ar"
   CONFIG["RANLIB"] = "aarch64-linux-android-ranlib"
   CONFIG["try_header"] = ""
-  CONFIG["CC_VERSION_MESSAGE"] = "Android clang version 5.0.300080  (based on LLVM 5.0.300080)\nTarget: aarch64--linux-android\nThread model: posix\nInstalledDir: /home/builder/.termux-build/_lib/15.2-aarch64-21-v12/bin"
+  CONFIG["CC_VERSION_MESSAGE"] = "Android clang version 5.0.300080  (based on LLVM 5.0.300080)\nTarget: aarch64--linux-android\nThread model: posix\nInstalledDir: /home/builder/.termux-build/_lib/16-aarch64-21-v3/bin"
   CONFIG["CC_VERSION"] = "$(CC) --version"
   CONFIG["CSRCFLAG"] = ""
   CONFIG["COUTFLAG"] = "-o "
@@ -172,11 +172,11 @@ module RbConfig
   CONFIG["EGREP"] = "grep -E"
   CONFIG["GREP"] = "grep"
   CONFIG["CPP"] = "aarch64-linux-android-cpp"
-  CONFIG["CXXFLAGS"] = " -Oz"
+  CONFIG["CXXFLAGS"] = " -Oz -fstack-protector-strong --param ssp-buffer-size=4"
   CONFIG["OBJEXT"] = "o"
   CONFIG["CPPFLAGS"] = "-I/data/data/com.termux/files/usr/include -isystem /data/data/com.termux/files/usr/include/libandroid-support $(DEFS) $(cppflags)"
   CONFIG["LDFLAGS"] = "-L. -L/data/data/com.termux/files/usr/lib -landroid-support -fstack-protector -rdynamic -Wl,-export-dynamic"
-  CONFIG["CFLAGS"] = " -Oz -fPIC"
+  CONFIG["CFLAGS"] = " -Oz -fstack-protector-strong --param ssp-buffer-size=4 -fPIC"
   CONFIG["CXX"] = "aarch64-linux-android-clang++"
   CONFIG["CC"] = "aarch64-linux-android-clang"
   CONFIG["NACL_LIB_PATH"] = ""
@@ -198,7 +198,7 @@ module RbConfig
   CONFIG["build_vendor"] = "pc"
   CONFIG["build_cpu"] = "x86_64"
   CONFIG["build"] = "x86_64-pc-linux-gnu"
-  CONFIG["RUBY_PROGRAM_VERSION"] = "2.4.2"
+  CONFIG["RUBY_PROGRAM_VERSION"] = "2.4.3"
   CONFIG["cxxflags"] = "$(optflags) $(debugflags) $(warnflags)"
   CONFIG["cppflags"] = ""
   CONFIG["cflags"] = "$(optflags) $(debugflags) $(warnflags)"

@@ -1,0 +1,8 @@
+[Desktop Entry]
+Version=1.0
+Name=lftp
+Icon=lftp-icon
+Type=Application
+Terminal=false
+Exec=xterm -en en_US.UTF-8 -fg white -bg black -u8 -fn 7x13 -fa "DejaVu Sans Mono:size=10:antialias=true" -e lftp
+Categories=Network;

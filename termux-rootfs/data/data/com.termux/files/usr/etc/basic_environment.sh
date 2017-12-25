@@ -115,7 +115,7 @@ fi
 ## Do not touch if you are not know what you are
 ## doing.
 ##
-export ANDROID_DATA="${PREFIX}/var/lib/android"
+export ANDROID_DATA="${PREFIX}/var/cache/android"
 export ANDROID_ROOT="/system"
 
 # BOOTCLASSPATH is not same on different devices,

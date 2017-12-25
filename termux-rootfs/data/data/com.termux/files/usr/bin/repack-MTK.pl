@@ -74,17 +74,17 @@ sub repack_boot {
 	die_msg("kernel file '$kernel' not found!") unless (-e $kernel);
 	chdir $ramdiskdir or die_msg("directory '$ramdiskdir' not found!");
 
-	foreach my $tool ("find", "cpio", "gzip") {
+	foreach my $tool ("find", "cpio", "gzip", "mkbootfs") {
 		die_msg("'$tool' binary not found! Double check your environment setup.")
 			if system ("command -v $tool >/dev/null 2>&1");
 	}
 	print "Repacking $type image...\n";
 	if ($debug_mode) {
 		print colored ("\nRamdisk repack command:", 'yellow') . "\n";
-		print "'find . | cpio -o -H newc | gzip > $dir/$ramdiskfile'\n\n";
+		print "'mkbootfs . | gzip > $dir/$ramdiskfile'\n\n";
 	}
 	print "Ramdisk size: ";
-	system ("find . | cpio -o -H newc | gzip > $dir/$ramdiskfile");
+	system ("mkbootfs . | gzip > $dir/$ramdiskfile");
 
 	chdir $dir or die "\n$ramdiskdir $!";;
 

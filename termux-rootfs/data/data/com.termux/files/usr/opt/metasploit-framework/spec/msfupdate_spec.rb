@@ -131,14 +131,23 @@ RSpec.describe Msfupdate do
         end
       end
 
-      context "with absolute path" do
-        let(:offline_file) { '/tmp/foo' }
-        it "accepts an absolute path" do
-          subject.parse_args(args)
-          expect(subject.instance_variable_get(:@offline_file)).to eq offline_file
+      if File.exist?("/data/data/com.termux/files/usr/tmp")
+        context "with absolute path" do
+          let(:offline_file) { '/data/data/com.termux/files/usr/tmp/foo' }
+          it "accepts an absolute path" do
+            subject.parse_args(args)
+            expect(subject.instance_variable_get(:@offline_file)).to eq offline_file
+          end
+        end
+      else
+        context "with absolute path" do
+          let(:offline_file) { '/tmp/foo' }
+          it "accepts an absolute path" do
+            subject.parse_args(args)
+            expect(subject.instance_variable_get(:@offline_file)).to eq offline_file
+          end
         end
       end
-
       context "without a space" do
         let(:args) { ["--offline-file=#{offline_file}"] }
 
